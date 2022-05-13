@@ -1,0 +1,126 @@
+Microsoft (R) Macro Assembler Version 6.11		    03/27/20 20:53:02
+linkhll.asm						     Page 1 - 1
+
+
+				;---------------------------------------------------------------------
+				;
+				; Program:       Linkhll
+				;
+				; Function:      The linkhll subroutine will be passed four unsigned
+				;                words on the stack (these are passed by value).
+				;                Linkhll is to find the two largest unsigned values
+				;                and multiply them creating a 32 bit unsigned product.
+				;
+				; Owner:         Selena Chen (schen53)
+				;
+				; Date:          03/29/2020
+				;
+				; Changes:
+				; --------------------------
+				; 11/21/2016 Original version
+				; 03/27/2020 Completed version
+				;
+				;---------------------------------------
+				         .model    small               ;64k code and 64k data
+				         .8086                         ;only allow 8086 instructions
+				         public    _linkhll            ;allow extrnal programs to call
+				;---------------------------------------
+ 0000				         .code                         ;start the code segment
+				;---------------------------------------
+ 0000				_linkhll:                              ;
+ 0000  55			         push      bp                  ;save bp register
+ 0001  8B EC			         mov       bp,sp               ;set up bp
+				;---------------------------------------
+				; Assumes v1 is max1 and v2 is max2
+				;---------------------------------------
+ 0003  8B 46 04			         mov       ax,[bp + 4]         ;ax = v1
+ 0006  8B 5E 06			         mov       bx,[bp + 6]         ;dx = v2
+				;---------------------------------------
+				; Compares v1 and v2
+				;---------------------------------------
+ 0009  3B C3			         cmp       ax,bx               ;if v1 >= v2
+ 000B  73 01			         jae       v3max1              ;compare with v3
+ 000D  93			         xchg      ax,bx               ;else swap v1 and v2
+				;---------------------------------------
+				; Compares max1 and v3
+				;---------------------------------------
+ 000E				v3max1:                                ;
+ 000E  3B 46 08			         cmp       ax,[bp + 8]         ;if max1 >= v3
+ 0011  73 06			         jae       v3max2              ;compare v3 with max2
+ 0013  93			         xchg      bx,ax               ;else ax is max2
+ 0014  87 46 08			         xchg      ax,[bp + 8]         ;and v3 is max1
+ 0017  EB 08			         jmp       v4max1              ;compare with v4
+				;---------------------------------------
+				; Compares max2 and v3
+				;---------------------------------------
+ 0019				v3max2:                                ;
+ 0019  3B 5E 08			         cmp       bx,[bp + 8]         ;if max2 >= v3
+ 001C  73 03			         jae       v4max1              ;compare with v4
+ 001E  87 5E 08			         xchg      bx,[bp + 8]         ;else v3 is max2
+				;---------------------------------------
+				; Compares max1 and v4
+				;---------------------------------------
+ 0021				v4max1:                                ;
+ 0021  3B 46 0A			         cmp       ax,[bp + 10]        ;if max1 >= v4
+ 0024  73 06			         jae       v4max2              ;compare v4 with max2
+ 0026  93			         xchg      bx,ax               ;else ax is max2
+ 0027  87 46 0A			         xchg      ax,[bp + 10]        ;and v4 is max1
+ 002A  EB 08			         jmp       multiply            ;ready to multiply
+				;---------------------------------------
+				; Compares max2 and v4
+				;---------------------------------------
+ 002C				v4max2:                                ;
+ 002C  3B 5E 0A			         cmp       bx,[bp + 10]        ;if max2 >= v4
+ 002F  73 03			         jae       multiply            ;ready to multiply
+ 0031  87 5E 0A			         xchg      bx,[bp + 10]        ;else v4 is max2
+				;---------------------------------------
+				; Multiplies the two largest values
+				;---------------------------------------
+ 0034				multiply:                              ;
+ 0034  F7 E3			         mul       bx                  ;multiply the 2 largest
+				;---------------------------------------
+				; Restore registers and return
+				;---------------------------------------
+ 0036				exit:                                  ;
+ 0036  5D			         pop       bp                  ;retrieve bp register
+ 0037  C3			         ret                           ;return
+				         end                           ;end source code
+				;---------------------------------------
+Microsoft (R) Macro Assembler Version 6.11		    03/27/20 20:53:02
+linkhll.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	16 Bit	 0000	  Word	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0038	  Word	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0002h	 
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+_linkhll . . . . . . . . . . . .	L Near	 0000	  _TEXT	Public
+exit . . . . . . . . . . . . . .	L Near	 0036	  _TEXT	
+multiply . . . . . . . . . . . .	L Near	 0034	  _TEXT	
+v3max1 . . . . . . . . . . . . .	L Near	 000E	  _TEXT	
+v3max2 . . . . . . . . . . . . .	L Near	 0019	  _TEXT	
+v4max1 . . . . . . . . . . . . .	L Near	 0021	  _TEXT	
+v4max2 . . . . . . . . . . . . .	L Near	 002C	  _TEXT	
+
+	   0 Warnings
+	   0 Errors

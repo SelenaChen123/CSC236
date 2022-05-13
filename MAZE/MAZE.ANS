@@ -1,0 +1,289 @@
+Test date: 03/18/20  19:29:38 
+The number of times you used the grading program is 14 
+In the business world, your customer replaces the grading program. 
+The goal is a correct program with the fewest grading attempts. 
+Maze Grading System Version 4.0
+Student: St#1=Chen                 St#2t=Verma                Type=Team                
+Grading and testing history log
+       User Test.    Date: 03/10/20  18:52:04  maze.01      -            
+       User Test.    Date: 03/10/20  18:56:06  maze.01      -            
+       User Test.    Date: 03/13/20  16:36:31  maze.01      -            
+       User Test.    Date: 03/13/20  16:42:18  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:04  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:24  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:31  maze.01      -            
+       User Test.    Date: 03/13/20  16:45:15  maze.01      -            
+       User Test.    Date: 03/13/20  17:00:44  maze.01      -            
+       User Test.    Date: 03/13/20  17:03:40  maze.01      -            
+       User Test.    Date: 03/13/20  17:34:40  maze.01      -            
+       User Test.    Date: 03/13/20  17:36:34  maze.01      -            
+       User Test.    Date: 03/13/20  17:39:27  maze.01      -            
+       User Test.    Date: 03/13/20  18:09:50  maze.01      -            
+       User Test.    Date: 03/13/20  18:12:33  maze.01      -            
+       User Test.    Date: 03/13/20  18:38:27  maze.01      -            
+       User Test.    Date: 03/13/20  18:43:31  maze.01      -            
+       User Test.    Date: 03/13/20  18:46:25  maze.01      -            
+       User Test.    Date: 03/13/20  18:48:40  maze.01      -            
+       User Test.    Date: 03/13/20  18:49:41  maze.01      -            
+       User Test.    Date: 03/13/20  19:01:36  maze.01      -            
+       User Test.    Date: 03/13/20  19:32:45  maze.01      -            
+       User Test.    Date: 03/13/20  19:36:45  maze.01      -            
+       User Test.    Date: 03/13/20  21:35:14  maze.01      -            
+       User Test.    Date: 03/13/20  21:37:10  maze.01      -            
+       User Test.    Date: 03/13/20  21:37:35  maze.01      -            
+       User Test.    Date: 03/13/20  22:01:49  maze.01      -            
+       User Test.    Date: 03/13/20  22:12:05  maze.01      -            
+       User Test.    Date: 03/13/20  22:12:53  r            -            
+       User Test.    Date: 03/13/20  22:13:44  maze.01      -            
+       User Test.    Date: 03/13/20  22:15:20  r            -            
+       User Test.    Date: 03/13/20  22:19:15  maze.01      -            
+       User Test.    Date: 03/13/20  22:30:55  maze.01      -            
+       User Test.    Date: 03/13/20  22:31:24  maze.01      -            
+       User Test.    Date: 03/13/20  22:31:57  r            -            
+       User Test.    Date: 03/13/20  22:34:48  maze.01      -            
+       User Test.    Date: 03/13/20  22:35:19  r            -            
+       User Test.    Date: 03/13/20  22:35:46  r            -            
+       User Test.    Date: 03/13/20  22:37:47  maze.01      -            
+       User Test.    Date: 03/13/20  22:38:19  r            -            
+       User Test.    Date: 03/13/20  22:38:30  r            -            
+       User Test.    Date: 03/13/20  22:47:07  maze.02      -            
+       User Test.    Date: 03/13/20  22:47:46  maze.03      -            
+       User Test.    Date: 03/13/20  22:48:19  maze.04      -            
+       User Test.    Date: 03/13/20  22:48:50  maze.05      -            
+       User Test.    Date: 03/13/20  22:49:34  maze.06      -            
+       User Test.    Date: 03/13/20  22:51:21  r            -            
+   *** Grading Run.  Date: 03/13/20  22:53:12 
+       User Test.    Date: 03/14/20  17:20:55  r            -            
+       User Test.    Date: 03/14/20  17:23:09  maze.01      -            
+       User Test.    Date: 03/14/20  17:23:49  maze.02      -            
+       User Test.    Date: 03/14/20  17:24:25  maze.03      -            
+       User Test.    Date: 03/14/20  17:25:02  maze.04      -            
+       User Test.    Date: 03/14/20  17:25:33  maze.05      -            
+       User Test.    Date: 03/14/20  17:26:17  maze.06      -            
+   *** Grading Run.  Date: 03/14/20  17:28:10 
+       User Test.    Date: 03/14/20  17:45:19  maze.01      -            
+       User Test.    Date: 03/14/20  17:46:29  maze.02      -            
+       User Test.    Date: 03/14/20  17:47:03  maze.03      -            
+       User Test.    Date: 03/14/20  17:48:01  maze.04      -            
+       User Test.    Date: 03/14/20  17:48:31  maze.05      -            
+       User Test.    Date: 03/14/20  17:49:13  maze.06      -            
+       User Test.    Date: 03/14/20  17:51:07  r            -            
+   *** Grading Run.  Date: 03/14/20  17:58:37 
+       User Test.    Date: 03/14/20  18:06:07  maze.01      -            
+       User Test.    Date: 03/14/20  18:06:51  maze.01      -            
+       User Test.    Date: 03/14/20  18:07:21  maze.02      -            
+       User Test.    Date: 03/14/20  18:08:19  maze.03      -            
+       User Test.    Date: 03/14/20  18:10:14  maze.04      -            
+       User Test.    Date: 03/14/20  18:10:51  maze.05      -            
+       User Test.    Date: 03/14/20  18:12:27  maze.06      -            
+       User Test.    Date: 03/14/20  18:14:25  r            -            
+       User Test.    Date: 03/14/20  18:18:08  r            -            
+       User Test.    Date: 03/14/20  18:18:32  r            -            
+       User Test.    Date: 03/14/20  18:28:50  r            -            
+       User Test.    Date: 03/14/20  18:29:48  r            -            
+       User Test.    Date: 03/14/20  18:31:18  r            -            
+       User Test.    Date: 03/14/20  18:33:06  r            -            
+       User Test.    Date: 03/14/20  18:33:25  r            -            
+       User Test.    Date: 03/14/20  18:33:47  r            -            
+   *** Grading Run.  Date: 03/14/20  18:34:54 
+       User Test.    Date: 03/14/20  18:39:00  r            -            
+       User Test.    Date: 03/14/20  18:40:35  r            -            
+   *** Grading Run.  Date: 03/14/20  18:41:36 
+       User Test.    Date: 03/14/20  18:44:57  r            -            
+   *** Grading Run.  Date: 03/14/20  18:47:52 
+       User Test.    Date: 03/14/20  18:59:54  maze.01      -            
+   *** Grading Run.  Date: 03/14/20  19:00:24 
+       User Test.    Date: 03/18/20  17:11:00  maze.01      -            
+       User Test.    Date: 03/18/20  17:13:02  maze.01      -            
+       User Test.    Date: 03/18/20  17:15:42  maze.01      -            
+       User Test.    Date: 03/18/20  17:23:21  maze.01      -            
+       User Test.    Date: 03/18/20  17:25:32  maze.01      -            
+       User Test.    Date: 03/18/20  17:28:54  maze.01      -            
+       User Test.    Date: 03/18/20  17:47:24  maze.01      -            
+       User Test.    Date: 03/18/20  18:05:36  maze.01      -            
+       User Test.    Date: 03/18/20  18:09:18  maze.01      -            
+       User Test.    Date: 03/18/20  18:17:46  maze.01      -            
+       User Test.    Date: 03/18/20  18:19:20  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:19:52 
+       User Test.    Date: 03/18/20  18:45:34  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:46:04 
+       User Test.    Date: 03/18/20  18:51:52  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:52:37 
+       User Test.    Date: 03/18/20  19:11:29  r            -            
+   *** Grading Run.  Date: 03/18/20  19:12:31 
+       User Test.    Date: 03/18/20  19:15:26  maze.01      -            
+       User Test.    Date: 03/18/20  19:17:45  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:18:30 
+       User Test.    Date: 03/18/20  19:23:48  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:24:17 
+       User Test.    Date: 03/18/20  19:28:47  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:29:38 
+Testing against the nextval specification
+Test completed okay
+Testing against non symetrical maze
+Test completed okay
+Testing against a set of random mazes
+Test completed okay
+Testing for correct operation and efficiency
+Building the maze....
+Congratulations! Your mouse has traversed the maze.
+ 
+++ Grade ++   50 = Points earned for correct answers.
+Your executed instruction count = 000005015
+
+++ Grade ++   10 = Points earned for code executed efficiency.
+Target executed: 15 = 0-4999  10 = 5000-5249  5 = 5250-5499  0 = 5500+ 
+
+++ Grade ++   15 = Points for code written. Your count is:  40.
+Target written : 15 = 00-40  10 = 41-45  5 = 46-50  0 = 51+
+
+-> Analyzing program documentation. 
+The heuristic algorithms used may have problems with your specific code. 
+Contact the instructor if you detect a problem with your grade. 
+DOCPH-0029 The program header format is adequate. 
+DOCHB-0.70 Use of code block headers is adequate. 
+DOCLC-1.00 Use of line comments is adequate. 
+++ Grade ++   20 = Points earned for correct documentation.    
+
+-> Calculating the total grade for the program.                  
+This grade is subject to adjustment by the instructor.           
+This grade will be reduced by any late submission penalty.       
+++ Grade ++   95 = Total grade generated by the Grading System.  
+
+-> Statistics on testing and grading                             
+    99  = Number of user tests.                                  
+    14  = Number of grading runs to get the program working.     
+     0  = Number of grading runs to improve efficiency or documentation. 
+
++- atyC;6&}xC6&k~C76&juiC86&zuzC?;&Zkyz&jgzk@&6957>586&&7?@8?@9>&
+
+
+
+Building the file maze.ans for electronic submission...
+
+;-------------------------------------------------------------------------
+; Program:   nextval subroutine
+;
+; Function:  Find next mouse move in an array 15 by 30.
+;            We can move into a position if its contents is blank ( 20h ).
+;
+; Input:     Calling sequence is:
+;            x    pointer   si
+;            y    pointer   di
+;            dir  pointer   bx
+;            maze pointer   bp
+;
+; Output:    x,y,dir modified in caller's data segment
+;
+; Owner:     Dana A. Lasher
+;            Selena Chen (schen53)
+;            Ayushi Verma (averma6)
+;
+; Date:      3/12/2020
+;
+; Changes:
+; --------------------------
+; 11/06/2016 Original version
+; 03/11/2020 First draft
+; 03/13/2020 Second draft
+; 03/14/2020 Working draft
+; 03/18/2020 Finalized version
+;
+;--------------------------------------------------
+         .model    small                          ;64k code and 64k data
+         .8086                                    ;only allow 8086 instructions
+         public    nextval                        ;allow extrnal programs to call
+;--------------------------------------------------
+         .data                                    ;start the data segment
+;--------------------------------------------------
+xMax     db        30                             ;max width of maze
+;--------------------------------------------------
+         .code                                    ;start the code segment
+;--------------------------------------------------
+; Save any modified registers
+;--------------------------------------------------
+nextval:                                          ;
+         push      ax                             ;save ax register
+         push      si                             ;save si register
+;--------------------------------------------------
+; Calculate offset to current square: x-31
+;--------------------------------------------------
+         mov       al,[si]                        ;move x to al
+         sub       al,31                          ;subtract 31 from x
+         cbw                                      ;convert to byte
+         mov       si,ax                          ;save x-31 to si
+;--------------------------------------------------
+; Calculate offset to current square: x-31 + y*30
+;--------------------------------------------------
+         mov       al,[di]                        ;move y to al
+         mul       [xMax]                         ;multiply by 30
+         add       si,ax                          ;accumulate total in si
+;--------------------------------------------------
+; Code to make 1 move in the maze
+;--------------------------------------------------
+         cmp       byte ptr [bx],2                ;if direction is south
+         je        east                           ;try to move east
+         cmp       byte ptr [bx],3                ;if direction is west
+         je        south                          ;try to move south
+         cmp       byte ptr [bx],4                ;if direction is north
+         je        west                           ;try to move west
+;--------------------------------------------------
+; Try to move north
+;--------------------------------------------------
+north:                                            ;
+         cmp       byte ptr ds:[bp + si - 30],' ' ;if square isn't empty
+         jne       east                           ;try east
+;--------------------------------------------------
+; Move north if we can
+;--------------------------------------------------
+         dec       byte ptr [di]                  ;move north
+         mov       byte ptr [bx],4                ;set direction to north
+         pop       si                             ;retrieve si register
+         jmp       exit                           ;exit after 1 move
+;--------------------------------------------------
+; If we cannot move north, try east
+;--------------------------------------------------
+east:                                             ;
+         cmp       byte ptr ds:[bp + si + 1],' '  ;if square isn't empty
+         jne       south                          ;try south
+;--------------------------------------------------
+; Move east if we can
+;--------------------------------------------------
+         pop       si                             ;retrieve si register
+         inc       byte ptr [si]                  ;move east
+         mov       byte ptr [bx],1                ;set direction to east
+         jmp       exit                           ;exit after 1 move
+;--------------------------------------------------
+; If we cannot move east, try south
+;--------------------------------------------------
+south:                                            ;
+         cmp       byte ptr ds:[bp + si + 30],' ' ;if square isn't empty
+         jne       west                           ;try west
+;--------------------------------------------------
+; Move south if we can
+;--------------------------------------------------
+         inc       byte ptr [di]                  ;move south
+         mov       byte ptr [bx],2                ;set direction to south
+         pop       si                             ;retrieve si register
+         jmp       exit                           ;exit ater 1 move
+;--------------------------------------------------
+; If we cannot move south, try west
+;--------------------------------------------------
+west:                                             ;
+         cmp       byte ptr ds:[bp + si - 1],' '  ;if square isn't empty
+         jne       north                          ;try north
+;--------------------------------------------------
+; Move west if we can
+;--------------------------------------------------
+         pop       si                             ;retrieve si register
+         dec       byte ptr [si]                  ;move west
+         mov       byte ptr [bx],3                ;set direction to west
+;--------------------------------------------------
+; Restore registers and return
+;--------------------------------------------------
+exit:                                             ;
+         pop       ax                             ;retrieve ax register
+         ret                                      ;return
+;--------------------------------------------------
+         end                                      ;end
+;--------------------------------------------------

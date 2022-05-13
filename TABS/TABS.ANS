@@ -1,0 +1,201 @@
+Test date: 02/26/20  16:01:51 
+The number of times you used the grading program is 4 
+In the business world, your customer replaces the grading program. 
+The goal is a correct program with the fewest grading attempts. 
+TABS Grading System Version 4.0
+Student: Last=Chen                 First=Selena               Type=Individual          
+Grading and testing history log
+       User Test.    Date: 02/26/20  12:48:45  tabin.1      testout      
+       User Test.    Date: 02/26/20  13:05:04  tabin.1      testout      
+       User Test.    Date: 02/26/20  13:09:40  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:02:14  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:10:23  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:18:31  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:18:37  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:18:38  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:18:40  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:18:46  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:27:08  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:27:10  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:27:11  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:27:12  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:27:16  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:27:21  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:27:38  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:29:53  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:29:54  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:29:55  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:29:57  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:30:03  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:31:44  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:31:45  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:31:46  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:31:48  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:31:50  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:31:53  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:31:54  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:31:55  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:44:18  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:46:32  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:46:34  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:46:36  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:46:37  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:46:42  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:46:48  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:46:51  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:46:53  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:46:57  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:47:00  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:47:02  tabin.3      testout      
+   *** Grading Run.  Date: 02/26/20  15:47:58 
+       User Test.    Date: 02/26/20  15:54:12  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:54:14  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:54:15  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:54:17  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:54:19  tabin.1      testout      
+   *** Grading Run.  Date: 02/26/20  15:54:22 
+       User Test.    Date: 02/26/20  15:59:48  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:59:50  tabin.2      testout      
+       User Test.    Date: 02/26/20  15:59:52  tabin.3      testout      
+       User Test.    Date: 02/26/20  15:59:53  tabin.4      testout      
+       User Test.    Date: 02/26/20  15:59:55  tabin.1      testout      
+       User Test.    Date: 02/26/20  15:59:57  tabin.1      testout      
+   *** Grading Run.  Date: 02/26/20  16:00:02 
+       User Test.    Date: 02/26/20  16:01:43  tabin.1      testout      
+       User Test.    Date: 02/26/20  16:01:45  tabin.2      testout      
+       User Test.    Date: 02/26/20  16:01:46  tabin.3      testout      
+       User Test.    Date: 02/26/20  16:01:47  tabin.4      testout      
+       User Test.    Date: 02/26/20  16:01:49  tabin.1      testout      
+   *** Grading Run.  Date: 02/26/20  16:01:51 
+   Running test 01   ...  tabs   gradin.1
+   Running test 01A  ...  tabs 6 gradin.1
+   Running test 01B  ...  tabs 1 gradin.1
+   Running test 02   ...  tabs   gradin.2
+   Running test 02A  ...  tabs 5 gradin.2
+   Running test 02B  ...  tabs 2 gradin.2
+   Running test 03   ...  tabs   gradin.3
+   Running test 03A  ...  tabs 7 gradin.3
+   Running test 03B  ...  tabs 3 gradin.3
+   *** Passed all functional tests
+++ Grade ++   60 = Points earned for correct answers.
+
+-> We are now analyzing your source code. You will be graded on
+the number of instructions you wrote to solve this problem.
+The target for the number of executable instructions written is:
+ 00 -  30 = 20 points 
+ 31 -  32 = 15 points 
+ 33 -  34 = 10 points 
+ 35 -  36 =  5 points 
+ 37+      =  0 points 
+Your actual counts are:
+Lines .......  85    Comments ...  44    Labels .......   7   
+Directives ..   5    Variables ..   0    Executables ..  29    McCabe ..   7 
+++ Grade ++   20 = Points earned for code written efficiency.  
+
+-> Analyzing program documentation. 
+The heuristic algorithms used may have problems with your specific code. 
+Contact the instructor if you detect a problem with your grade. 
+DOCPH-0018 The program header format is adequate. 
+DOCHB-0.59 Use of code block headers is adequate. 
+DOCLC-0.97 Use of line comments is adequate. 
+++ Grade ++   20 = Points earned for correct documentation.    
+
+-> Calculating the total grade for the program.                  
+This grade is subject to adjustment by the instructor.           
+This grade will be reduced by any late submission penalty.       
+++ Grade ++  100 = Total grade generated by the Grading System.  
+
+-> Statistics on testing and grading                             
+    58  = Number of user tests.                                  
+     4  = Number of grading runs to get the program working.     
+     0  = Number of grading runs to improve efficiency or documentation. 
+
++- atyC<6&}xC86&k~C6&juiC86&zuzC766&Zkyz&jgzk@&6858<586&&7<@67@;7&
+
+Building the file tabs.ans for electronic submission...
+
+;--------------------------------------------------------------------------
+;   program:    TABS
+;   function:   Reads lines from an ASCII input text file which is
+;               redirected to the standard input, expands tabs (replace
+;               tabs with the correct number of spaces) to create columns,
+;               and writes the updated lines to an ASCII output text file
+;               which is redirected from the standard output.
+;   run:        Start the program, then give input from standard (keyboard
+;               or a redirected ASCII text file).
+;   messages:   N/A
+;   return:     N/A
+;   limits:     Only handles the printable ASCII characters in the range of
+;               20h-7Fh along with the control characters tab (09h), line
+;               feed (0Ah), carriage return (0Dh), and End Of File (1Ah).
+;   owner:      Selena Chen
+;   date:       2/25/2020
+;   changes:    N/A
+;----------------------------------------
+        .model  small                   ;64k code and 64k data
+        .8086                           ;only allow 8086 instructions
+        .stack  256                     ;reserver 256 bytes for the stack
+;----------------------------------------
+        .code                           ;start the code segment
+;----------------------------------------
+start:                                  ;
+        mov     bl,10                   ;set default tab stop position
+        mov     cl,bl                   ;set cl to tab stop position
+        cmp     byte ptr es:[80h], 0    ;access the CLP count
+        je      read                    ;continue with the program
+        mov     bl, byte ptr es:[82h]   ;parameter found, load al with char
+        sub     bl,'0'
+        mov     cl,bl                   ;set cl to CLP tab stop position
+;----------------------------------------
+; read a character
+;----------------------------------------
+read:                                   ;
+        mov     ah,8                    ;set the dos code to read a char
+        int     21h                     ;read the char
+        cmp     al,09h                  ;was the char a tab
+        je      expand                  ;yes, expand tab
+;----------------------------------------
+; write a character
+;----------------------------------------
+write:                                  ;
+        sub     cl,1                    ;char read, decrement cl
+        mov     dl,al                   ;move the char to be read
+        mov     ah,2                    ;code to write char
+        int     21h                     ;write the char
+;----------------------------------------
+; determine whether to reset counter
+;----------------------------------------
+        cmp     al,0Ah                  ;was the char a line feed
+        je      reset                   ;yes, reset char count
+        cmp     cl,0                    ;at tab stop position?
+        je      reset                   ;yes, reset counter
+        jmp     continue                ;no, continue reading
+;----------------------------------------
+; expand tabs
+;----------------------------------------
+expand:                                 ;
+        mov     dl,' '                  ;move space to write
+        mov     ah,2                    ;code to write char
+        int     21h                     ;write char
+        loop    expand                  ;continue loop
+;----------------------------------------
+; reset counter
+;----------------------------------------
+reset:                                  ;
+        mov     cl,bl                   ;reset counter to CLP
+;----------------------------------------
+; continuation check
+;----------------------------------------
+continue:                               ;
+        cmp     dl,1Ah                  ;was the char EOF
+        jne     read                    ;no, read another char
+;----------------------------------------
+; terminate program execution
+;----------------------------------------
+exit:                                   ;
+        mov     ax,4c00h                ;set dos code to terminate program
+        int     21h                     ;return to dos
+        end     start                   ;marks the end of the source code
+                                        ;and specifies where you want the
+                                        ;program to start execution
+;----------------------------------------

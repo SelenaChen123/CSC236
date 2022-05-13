@@ -1,0 +1,13 @@
+CSC23x:  Homework Grades    (code=4-66776-9) Ver 580110
+Student:                 Chen,               Selena 
+Created: 03/01/20 Updated:  03/25 15:54:52  
+
+HW#  Started        Status         Grade
+HW5  03/01/20       D 03/01 19:37  100               
+HW6  03/01/20       D 03/01 18:32  100               
+HW7  03/03/20       D 03/03 19:59  100               
+HW8  03/25/20       D 03/25 15:54  100               
+VER=S204351W1W0E11P1F0R0K0:1:41 T052401V10/05000000050
+
+End of file     
+-

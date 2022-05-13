@@ -1,0 +1,9 @@
+1. My name is Selena Chen.
+2. I have read and understand all the policies in the syllabus including grading and academic integrity.
+3. I understand that if I ask the staff to look at code, it will be fully and clearly documented and I will have a design.
+4. I  understand that many issues with old test questions can be answered directly by entering the question into a small program and assembling it and looking at the listing file or running the program through the debugger.
+5. A non-technical person would expect the displayed numerical answer to be 40000.
+6. I predict the displayed numerical answer to be -25536.
+7. The actual displayed numerical answer is -25536.
+8. No, the system did not give any warming or error messages that the actual displayed numerical answer was wrong.
+9. The maximum value a short can hold is 2^15 or 32768, so doubling a short that holds a value of 20000 causes overflow and the displayed numerical answer becomes -25536 rather than 40000.

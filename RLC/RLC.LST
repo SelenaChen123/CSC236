@@ -1,0 +1,167 @@
+Microsoft (R) Macro Assembler Version 6.11		    04/08/20 16:57:19
+rlc.asm							     Page 1 - 1
+
+
+				;-------------------------------------------------------------------------------------
+				;  Program:      Run Length Coding
+				;
+				;  Function:     Decompresses 1 dimensional run lengths. This subroutine links with a
+				;                C main program. Run-length coding (RLC) is a form of data compression
+				;                for such data types in which runs of data are stored as a single data
+				;                value (black or white) and a count specifying the run length.
+				;
+				;  Input:        A pointer to the compressed data which consists of strings of runs
+				;                and features. A pointer to a buffer, into which RLC is to decompress
+				;                the data to recreate the original character array
+				;
+				;  Output:       The decompressed data is placed into the output buffer.
+				;
+				;  Owner:        Selena Chen (schen53)
+				;                Ayushi Verma (averma6)
+				;
+				;  Date:         04/08/20
+				;
+				;  Changes:      05/16/2017    Original version ... coded to spec design
+				;                04/05/2020    First draft
+				;                04/07/2020    Working draft
+				;                04/08/2020    Completed version
+				;-------------------------------------------------------------------------------------
+				         .model    small
+				         .8086
+				         public    _rlc
+				;-----------------------------------------------
+ 0000				         .data                                 ;start the data segment
+				;-----------------------------------------------
+ 0000 20			wh       db        32                          ;white ascii value
+ 0001 DB			blk      db        219                         ;black ascii value
+ 0002 01			is_left  db        1                           ;is it left 4 bits of byte
+ 0003 50			pels     db        80                          ;number of pels left
+				;-----------------------------------------------
+ 0000				         .code                                 ;start the code segnment
+				;-----------------------------------------------
+				; Save the registers ... 'C' requires (bp,si,di)
+				; Access the input and output lists
+				;-----------------------------------------------
+ 0000				_rlc:                                          ;
+ 0000  55			         push      bp                          ;save 'C' register
+ 0001  8B EC			         mov       bp,sp                       ;set bp to point to stack
+ 0003  56			         push      si                          ;save 'C' register
+ 0004  57			         push      di                          ;save 'C' register
+ 0005  8B 76 04			         mov       si,[bp+4]                   ;si points to the input compressed data
+ 0008  8B 7E 06			         mov       di,[bp+6]                   ;di points to the empty output buffer
+				;-----------------------------------------------
+				; Sets up white as first color being used and
+				; initializes cx to 0
+				;-----------------------------------------------
+ 000B  8A 1E 0000 R		         mov       bl,[wh]                     ;begin with white color
+ 000F  B9 0000			         mov       cx,0                        ;clears cx register
+ 0012  FC			         cld                                   ;clears direction flag for load/store
+				;-----------------------------------------------
+				; Gets each byte from input buffer
+				;-----------------------------------------------
+ 0013				load:                                          ;
+ 0013  AC			         lodsb                                 ;loads input byte into al
+ 0014  3C 00			         cmp       al,00h                      ;checks if byte is 0
+ 0016  74 4A			         je        exit                        ;if it is, exit
+ 0018  8A F8			         mov       bh,al                       ;hold byte in bh register
+ 001A  B1 04			         mov       cl,4                        ;hold bit shift value 4 in cl
+ 001C  D2 E8			         shr       al,cl                       ;shift al by 4 to get upper 4 bits
+ 001E  8A C8			         mov       cl,al                       ;move this value into cl
+ 0020  80 E7 0F			         and       bh,0fh                      ;perform and to get lower 4 bits
+ 0023  C6 06 0002 R 01		         mov       [is_left],1                 ;process top 4 bits value first
+				;-----------------------------------------------
+				; Process the 4 bits of input byte and change
+				; color appropriately
+				;-----------------------------------------------
+ 0028				left_run:                                      ;
+ 0028  8A C3			         mov       al,bl                       ;move color value into al for output
+ 002A  80 F9 0F			         cmp       cl,0fh                      ;is cl value 15
+ 002D  74 10			         je        hit_eol                     ;yes, jump to end of line code
+ 002F  28 0E 0003 R		         sub       [pels],cl                   ;total pels -= current count
+ 0033  3A 1E 0000 R		         cmp       bl,[wh]                     ;is the color white
+ 0037  75 0F			         jne       set_white                   ;if not jump to make it white
+ 0039  8A 1E 0001 R		         mov       bl,[blk]                    ;change color to black
+ 003D  EB 0D			         jmp       print                       ;ready to print so jump to print
+				;-----------------------------------------------
+				; Process what happens when you hit the end of
+				; a line
+				;-----------------------------------------------
+ 003F				hit_eol:                                       ;
+ 003F  8A 0E 0003 R		         mov       cl,[pels]                   ;move remaining pels to cl
+ 0043  C6 06 0003 R 50		         mov       [pels],80                   ;change pel count to 80 for new line
+				;-----------------------------------------------
+				; Set color to white
+				;-----------------------------------------------
+ 0048				set_white:                                     ;
+ 0048  8A 1E 0000 R		         mov       bl,[wh]                     ;change color to white
+				;-----------------------------------------------
+				; Push byte value into output buffer
+				;-----------------------------------------------
+ 004C				print:                                         ;
+ 004C  8C DA			         mov       dx,ds                       ;move ds contents into dx
+ 004E  8E C2			         mov       es,dx                       ;move dx into es to copy ds into es
+ 0050  F3/ AA			         rep       stosb                       ;store byte in output buffer
+				;-----------------------------------------------
+				; Continue processing values of input
+				;-----------------------------------------------
+ 0052  80 3E 0002 R 01		         cmp       [is_left],1                 ;check if we are processing left 4 bits
+ 0057  75 BA			         jne       load                        ;jump to process next value
+				;-----------------------------------------------
+				; Process the lower 4 bits of input byte
+				;-----------------------------------------------
+ 0059  8A CF			         mov       cl,bh                       ;move lower 4 bits into cl
+ 005B  C6 06 0002 R 00		         mov       [is_left],0                 ;we are not processing top 4 bits
+ 0060  EB C6			         jmp       left_run                    ;process input
+				;-----------------------------------------------
+				; Restore registers and return
+				;-----------------------------------------------
+ 0062				exit:                                          ;
+ 0062  5F			         pop       di                          ;restore 'C' register
+ 0063  5E			         pop       si                          ;restore 'C' register
+ 0064  5D			         pop       bp                          ;restore 'C' register
+ 0065  C3			         ret                                   ;return
+				;-----------------------------------------------
+				         end                                   ;end
+				;-----------------------------------------------
+Microsoft (R) Macro Assembler Version 6.11		    04/08/20 16:57:19
+rlc.asm							     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	16 Bit	 0004	  Word	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0066	  Word	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0002h	 
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+_rlc . . . . . . . . . . . . . .	L Near	 0000	  _TEXT	Public
+blk  . . . . . . . . . . . . . .	Byte	 0001	  _DATA	
+exit . . . . . . . . . . . . . .	L Near	 0062	  _TEXT	
+hit_eol  . . . . . . . . . . . .	L Near	 003F	  _TEXT	
+is_left  . . . . . . . . . . . .	Byte	 0002	  _DATA	
+left_run . . . . . . . . . . . .	L Near	 0028	  _TEXT	
+load . . . . . . . . . . . . . .	L Near	 0013	  _TEXT	
+pels . . . . . . . . . . . . . .	Byte	 0003	  _DATA	
+print  . . . . . . . . . . . . .	L Near	 004C	  _TEXT	
+set_white  . . . . . . . . . . .	L Near	 0048	  _TEXT	
+wh . . . . . . . . . . . . . . .	Byte	 0000	  _DATA	
+
+	   0 Warnings
+	   0 Errors

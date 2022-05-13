@@ -1,0 +1,62 @@
+HW6 - Indirect Addressing 
+
+These are the hex values for the 8086 pointer registers. 
+
+    SI=000A  DI=0010  BX=0011  BP=004F
+
+These are the hex values for the Data Segment shown 16 bytes per line. 
+
+    0000: E7 A4 CE 5C FC F2 85 9D 50 F5 BA 7F 67 B3 B0 4A 
+    0010: 3E CB DC B1 89 A8 47 A8 3F FA 34 75 58 67 03 0A 
+    0020: D6 7D 55 92 02 EC 71 4A F8 F2 E6 92 65 16 72 44 
+    0030: 90 19 23 44 97 2A BC 58 FB 59 5A 3A 5F 4E 57 EC 
+
+The first 5 questions access BYTE size data. 
+
+01. What is the hex value in al after executing: mov al,[bx] 
+
+02. What is the hex value in al after executing: mov al,[si] 
+
+03. What is the hex value in al after executing: mov al,[di] 
+
+04. What is the hex value in al after executing: mov al,[di+1] 
+
+05. What is the hex value in al after executing: mov al,[di-1] 
+
+The next 10 questions access WORD size data.
+
+06. What is the hex value in ax after executing: mov ax,[bx] 
+
+07. What is the hex value in ax after executing: mov ax,[si] 
+
+08. What is the hex value in ax after executing: mov ax,[di] 
+
+09. What is the hex value in ax after executing: mov ax,[si+7] 
+
+10. What is the hex value in ax after executing: mov ax,[di+12] 
+
+11. What is the hex value in ax after executing: mov ax,[bx-13] 
+
+12. What is the hex value in ax after executing: mov ax,[bx+si] 
+
+13. What is the hex value in ax after executing: mov ax,[bx+di] 
+
+14. What is the hex value in ax after executing: mov ax,[bx+si+4] 
+
+15. What is the hex value in ax after executing: mov ax,[bx+di-9] 
+
+16. Does this instruction need a data size override:  add [bx],9  
+
+17. From which segment (code, data, extra, stack) is the   
+    source data obtained for this instruction:  sub dx,[di]  
+
+18. From which segment (code, data, extra, stack) is the     
+    source data obtained for this instruction:  mov dx,[bp+4]  
+
+19. From which segment (code, data, extra, stack) is the     
+    source data obtained for this instruction:  sub dx,[ds:bp] 
+
+20. Is this instruction valid:  sub [dx],2  
+
+End of file
+-

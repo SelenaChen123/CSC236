@@ -1,0 +1,128 @@
+Microsoft (R) Macro Assembler Version 6.11		    02/26/20 16:01:35
+tabs.asm						     Page 1 - 1
+
+
+				;--------------------------------------------------------------------------
+				;   program:    TABS
+				;   function:   Reads lines from an ASCII input text file which is
+				;               redirected to the standard input, expands tabs (replace
+				;               tabs with the correct number of spaces) to create columns,
+				;               and writes the updated lines to an ASCII output text file
+				;               which is redirected from the standard output.
+				;   run:        Start the program, then give input from standard (keyboard
+				;               or a redirected ASCII text file).
+				;   messages:   N/A
+				;   return:     N/A
+				;   limits:     Only handles the printable ASCII characters in the range of
+				;               20h-7Fh along with the control characters tab (09h), line
+				;               feed (0Ah), carriage return (0Dh), and End Of File (1Ah).
+				;   owner:      Selena Chen
+				;   date:       2/25/2020
+				;   changes:    N/A
+				;----------------------------------------
+				        .model  small                   ;64k code and 64k data
+				        .8086                           ;only allow 8086 instructions
+				        .stack  256                     ;reserver 256 bytes for the stack
+				;----------------------------------------
+ 0000				        .code                           ;start the code segment
+				;----------------------------------------
+ 0000				start:                                  ;
+ 0000  B3 0A			        mov     bl,10                   ;set default tab stop position
+ 0002  8A CB			        mov     cl,bl                   ;set cl to tab stop position
+ 0004  26: 80 3E 0080 00	        cmp     byte ptr es:[80h], 0    ;access the CLP count
+ 000A  74 0A			        je      read                    ;continue with the program
+ 000C  26: 8A 1E 0082		        mov     bl, byte ptr es:[82h]   ;parameter found, load al with char
+ 0011  80 EB 30			        sub     bl,'0'
+ 0014  8A CB			        mov     cl,bl                   ;set cl to CLP tab stop position
+				;----------------------------------------
+				; read a character
+				;----------------------------------------
+ 0016				read:                                   ;
+ 0016  B4 08			        mov     ah,8                    ;set the dos code to read a char
+ 0018  CD 21			        int     21h                     ;read the char
+ 001A  3C 09			        cmp     al,09h                  ;was the char a tab
+ 001C  74 14			        je      expand                  ;yes, expand tab
+				;----------------------------------------
+				; write a character
+				;----------------------------------------
+ 001E				write:                                  ;
+ 001E  80 E9 01			        sub     cl,1                    ;char read, decrement cl
+ 0021  8A D0			        mov     dl,al                   ;move the char to be read
+ 0023  B4 02			        mov     ah,2                    ;code to write char
+ 0025  CD 21			        int     21h                     ;write the char
+				;----------------------------------------
+				; determine whether to reset counter
+				;----------------------------------------
+ 0027  3C 0A			        cmp     al,0Ah                  ;was the char a line feed
+ 0029  74 0F			        je      reset                   ;yes, reset char count
+ 002B  80 F9 00			        cmp     cl,0                    ;at tab stop position?
+ 002E  74 0A			        je      reset                   ;yes, reset counter
+ 0030  EB 0A			        jmp     continue                ;no, continue reading
+				;----------------------------------------
+				; expand tabs
+				;----------------------------------------
+ 0032				expand:                                 ;
+ 0032  B2 20			        mov     dl,' '                  ;move space to write
+ 0034  B4 02			        mov     ah,2                    ;code to write char
+ 0036  CD 21			        int     21h                     ;write char
+ 0038  E2 F8			        loop    expand                  ;continue loop
+				;----------------------------------------
+				; reset counter
+				;----------------------------------------
+ 003A				reset:                                  ;
+ 003A  8A CB			        mov     cl,bl                   ;reset counter to CLP
+				;----------------------------------------
+				; continuation check
+				;----------------------------------------
+ 003C				continue:                               ;
+ 003C  80 FA 1A			        cmp     dl,1Ah                  ;was the char EOF
+ 003F  75 D5			        jne     read                    ;no, read another char
+				;----------------------------------------
+				; terminate program execution
+				;----------------------------------------
+ 0041				exit:                                   ;
+ 0041  B8 4C00			        mov     ax,4c00h                ;set dos code to terminate program
+ 0044  CD 21			        int     21h                     ;return to dos
+				        end     start                   ;marks the end of the source code
+				                                        ;and specifies where you want the
+				                                        ;program to start execution
+				;----------------------------------------
+Microsoft (R) Macro Assembler Version 6.11		    02/26/20 16:01:35
+tabs.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	16 Bit	 0000	  Word	  Public  'DATA'	
+STACK  . . . . . . . . . . . . .	16 Bit	 0100	  Para	  Stack	  'STACK'	 
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0046	  Word	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0002h	 
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+continue . . . . . . . . . . . .	L Near	 003C	  _TEXT	
+exit . . . . . . . . . . . . . .	L Near	 0041	  _TEXT	
+expand . . . . . . . . . . . . .	L Near	 0032	  _TEXT	
+read . . . . . . . . . . . . . .	L Near	 0016	  _TEXT	
+reset  . . . . . . . . . . . . .	L Near	 003A	  _TEXT	
+start  . . . . . . . . . . . . .	L Near	 0000	  _TEXT	
+write  . . . . . . . . . . . . .	L Near	 001E	  _TEXT	
+
+	   0 Warnings
+	   0 Errors

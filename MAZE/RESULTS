@@ -1,0 +1,163 @@
+Test date: 03/18/20  19:29:38 
+The number of times you used the grading program is 14 
+In the business world, your customer replaces the grading program. 
+The goal is a correct program with the fewest grading attempts. 
+Maze Grading System Version 4.0
+Student: St#1=Chen                 St#2t=Verma                Type=Team                
+Grading and testing history log
+       User Test.    Date: 03/10/20  18:52:04  maze.01      -            
+       User Test.    Date: 03/10/20  18:56:06  maze.01      -            
+       User Test.    Date: 03/13/20  16:36:31  maze.01      -            
+       User Test.    Date: 03/13/20  16:42:18  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:04  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:24  maze.01      -            
+       User Test.    Date: 03/13/20  16:44:31  maze.01      -            
+       User Test.    Date: 03/13/20  16:45:15  maze.01      -            
+       User Test.    Date: 03/13/20  17:00:44  maze.01      -            
+       User Test.    Date: 03/13/20  17:03:40  maze.01      -            
+       User Test.    Date: 03/13/20  17:34:40  maze.01      -            
+       User Test.    Date: 03/13/20  17:36:34  maze.01      -            
+       User Test.    Date: 03/13/20  17:39:27  maze.01      -            
+       User Test.    Date: 03/13/20  18:09:50  maze.01      -            
+       User Test.    Date: 03/13/20  18:12:33  maze.01      -            
+       User Test.    Date: 03/13/20  18:38:27  maze.01      -            
+       User Test.    Date: 03/13/20  18:43:31  maze.01      -            
+       User Test.    Date: 03/13/20  18:46:25  maze.01      -            
+       User Test.    Date: 03/13/20  18:48:40  maze.01      -            
+       User Test.    Date: 03/13/20  18:49:41  maze.01      -            
+       User Test.    Date: 03/13/20  19:01:36  maze.01      -            
+       User Test.    Date: 03/13/20  19:32:45  maze.01      -            
+       User Test.    Date: 03/13/20  19:36:45  maze.01      -            
+       User Test.    Date: 03/13/20  21:35:14  maze.01      -            
+       User Test.    Date: 03/13/20  21:37:10  maze.01      -            
+       User Test.    Date: 03/13/20  21:37:35  maze.01      -            
+       User Test.    Date: 03/13/20  22:01:49  maze.01      -            
+       User Test.    Date: 03/13/20  22:12:05  maze.01      -            
+       User Test.    Date: 03/13/20  22:12:53  r            -            
+       User Test.    Date: 03/13/20  22:13:44  maze.01      -            
+       User Test.    Date: 03/13/20  22:15:20  r            -            
+       User Test.    Date: 03/13/20  22:19:15  maze.01      -            
+       User Test.    Date: 03/13/20  22:30:55  maze.01      -            
+       User Test.    Date: 03/13/20  22:31:24  maze.01      -            
+       User Test.    Date: 03/13/20  22:31:57  r            -            
+       User Test.    Date: 03/13/20  22:34:48  maze.01      -            
+       User Test.    Date: 03/13/20  22:35:19  r            -            
+       User Test.    Date: 03/13/20  22:35:46  r            -            
+       User Test.    Date: 03/13/20  22:37:47  maze.01      -            
+       User Test.    Date: 03/13/20  22:38:19  r            -            
+       User Test.    Date: 03/13/20  22:38:30  r            -            
+       User Test.    Date: 03/13/20  22:47:07  maze.02      -            
+       User Test.    Date: 03/13/20  22:47:46  maze.03      -            
+       User Test.    Date: 03/13/20  22:48:19  maze.04      -            
+       User Test.    Date: 03/13/20  22:48:50  maze.05      -            
+       User Test.    Date: 03/13/20  22:49:34  maze.06      -            
+       User Test.    Date: 03/13/20  22:51:21  r            -            
+   *** Grading Run.  Date: 03/13/20  22:53:12 
+       User Test.    Date: 03/14/20  17:20:55  r            -            
+       User Test.    Date: 03/14/20  17:23:09  maze.01      -            
+       User Test.    Date: 03/14/20  17:23:49  maze.02      -            
+       User Test.    Date: 03/14/20  17:24:25  maze.03      -            
+       User Test.    Date: 03/14/20  17:25:02  maze.04      -            
+       User Test.    Date: 03/14/20  17:25:33  maze.05      -            
+       User Test.    Date: 03/14/20  17:26:17  maze.06      -            
+   *** Grading Run.  Date: 03/14/20  17:28:10 
+       User Test.    Date: 03/14/20  17:45:19  maze.01      -            
+       User Test.    Date: 03/14/20  17:46:29  maze.02      -            
+       User Test.    Date: 03/14/20  17:47:03  maze.03      -            
+       User Test.    Date: 03/14/20  17:48:01  maze.04      -            
+       User Test.    Date: 03/14/20  17:48:31  maze.05      -            
+       User Test.    Date: 03/14/20  17:49:13  maze.06      -            
+       User Test.    Date: 03/14/20  17:51:07  r            -            
+   *** Grading Run.  Date: 03/14/20  17:58:37 
+       User Test.    Date: 03/14/20  18:06:07  maze.01      -            
+       User Test.    Date: 03/14/20  18:06:51  maze.01      -            
+       User Test.    Date: 03/14/20  18:07:21  maze.02      -            
+       User Test.    Date: 03/14/20  18:08:19  maze.03      -            
+       User Test.    Date: 03/14/20  18:10:14  maze.04      -            
+       User Test.    Date: 03/14/20  18:10:51  maze.05      -            
+       User Test.    Date: 03/14/20  18:12:27  maze.06      -            
+       User Test.    Date: 03/14/20  18:14:25  r            -            
+       User Test.    Date: 03/14/20  18:18:08  r            -            
+       User Test.    Date: 03/14/20  18:18:32  r            -            
+       User Test.    Date: 03/14/20  18:28:50  r            -            
+       User Test.    Date: 03/14/20  18:29:48  r            -            
+       User Test.    Date: 03/14/20  18:31:18  r            -            
+       User Test.    Date: 03/14/20  18:33:06  r            -            
+       User Test.    Date: 03/14/20  18:33:25  r            -            
+       User Test.    Date: 03/14/20  18:33:47  r            -            
+   *** Grading Run.  Date: 03/14/20  18:34:54 
+       User Test.    Date: 03/14/20  18:39:00  r            -            
+       User Test.    Date: 03/14/20  18:40:35  r            -            
+   *** Grading Run.  Date: 03/14/20  18:41:36 
+       User Test.    Date: 03/14/20  18:44:57  r            -            
+   *** Grading Run.  Date: 03/14/20  18:47:52 
+       User Test.    Date: 03/14/20  18:59:54  maze.01      -            
+   *** Grading Run.  Date: 03/14/20  19:00:24 
+       User Test.    Date: 03/18/20  17:11:00  maze.01      -            
+       User Test.    Date: 03/18/20  17:13:02  maze.01      -            
+       User Test.    Date: 03/18/20  17:15:42  maze.01      -            
+       User Test.    Date: 03/18/20  17:23:21  maze.01      -            
+       User Test.    Date: 03/18/20  17:25:32  maze.01      -            
+       User Test.    Date: 03/18/20  17:28:54  maze.01      -            
+       User Test.    Date: 03/18/20  17:47:24  maze.01      -            
+       User Test.    Date: 03/18/20  18:05:36  maze.01      -            
+       User Test.    Date: 03/18/20  18:09:18  maze.01      -            
+       User Test.    Date: 03/18/20  18:17:46  maze.01      -            
+       User Test.    Date: 03/18/20  18:19:20  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:19:52 
+       User Test.    Date: 03/18/20  18:45:34  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:46:04 
+       User Test.    Date: 03/18/20  18:51:52  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  18:52:37 
+       User Test.    Date: 03/18/20  19:11:29  r            -            
+   *** Grading Run.  Date: 03/18/20  19:12:31 
+       User Test.    Date: 03/18/20  19:15:26  maze.01      -            
+       User Test.    Date: 03/18/20  19:17:45  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:18:30 
+       User Test.    Date: 03/18/20  19:23:48  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:24:17 
+       User Test.    Date: 03/18/20  19:28:47  maze.01      -            
+   *** Grading Run.  Date: 03/18/20  19:29:38 
+Testing against the nextval specification
+Test completed okay
+Testing against non symetrical maze
+Test completed okay
+Testing against a set of random mazes
+Test completed okay
+Testing for correct operation and efficiency
+Building the maze....
+Congratulations! Your mouse has traversed the maze.
+ 
+++ Grade ++   50 = Points earned for correct answers.
+Your executed instruction count = 000005015
+
+++ Grade ++   10 = Points earned for code executed efficiency.
+Target executed: 15 = 0-4999  10 = 5000-5249  5 = 5250-5499  0 = 5500+ 
+
+++ Grade ++   15 = Points for code written. Your count is:  40.
+Target written : 15 = 00-40  10 = 41-45  5 = 46-50  0 = 51+
+
+-> Analyzing program documentation. 
+The heuristic algorithms used may have problems with your specific code. 
+Contact the instructor if you detect a problem with your grade. 
+DOCPH-0029 The program header format is adequate. 
+DOCHB-0.70 Use of code block headers is adequate. 
+DOCLC-1.00 Use of line comments is adequate. 
+++ Grade ++   20 = Points earned for correct documentation.    
+
+-> Calculating the total grade for the program.                  
+This grade is subject to adjustment by the instructor.           
+This grade will be reduced by any late submission penalty.       
+++ Grade ++   95 = Total grade generated by the Grading System.  
+
+-> Statistics on testing and grading                             
+    99  = Number of user tests.                                  
+    14  = Number of grading runs to get the program working.     
+     0  = Number of grading runs to improve efficiency or documentation. 
+
++- atyC;6&}xC6&k~C76&juiC86&zuzC?;&Zkyz&jgzk@&6957>586&&7?@8?@9>&
+
+
+
+Building the file maze.ans for electronic submission...
+

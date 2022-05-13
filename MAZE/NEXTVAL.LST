@@ -1,0 +1,168 @@
+Microsoft (R) Macro Assembler Version 6.11		    03/18/20 19:28:43
+nextval.asm						     Page 1 - 1
+
+
+				;-------------------------------------------------------------------------
+				; Program:   nextval subroutine
+				;
+				; Function:  Find next mouse move in an array 15 by 30.
+				;            We can move into a position if its contents is blank ( 20h ).
+				;
+				; Input:     Calling sequence is:
+				;            x    pointer   si
+				;            y    pointer   di
+				;            dir  pointer   bx
+				;            maze pointer   bp
+				;
+				; Output:    x,y,dir modified in caller's data segment
+				;
+				; Owner:     Dana A. Lasher
+				;            Selena Chen (schen53)
+				;            Ayushi Verma (averma6)
+				;
+				; Date:      3/12/2020
+				;
+				; Changes:
+				; --------------------------
+				; 11/06/2016 Original version
+				; 03/11/2020 First draft
+				; 03/13/2020 Second draft
+				; 03/14/2020 Working draft
+				; 03/18/2020 Finalized version
+				;
+				;--------------------------------------------------
+				         .model    small                          ;64k code and 64k data
+				         .8086                                    ;only allow 8086 instructions
+				         public    nextval                        ;allow extrnal programs to call
+				;--------------------------------------------------
+ 0000				         .data                                    ;start the data segment
+				;--------------------------------------------------
+ 0000 1E			xMax     db        30                             ;max width of maze
+				;--------------------------------------------------
+ 0000				         .code                                    ;start the code segment
+				;--------------------------------------------------
+				; Save any modified registers
+				;--------------------------------------------------
+ 0000				nextval:                                          ;
+ 0000  50			         push      ax                             ;save ax register
+ 0001  56			         push      si                             ;save si register
+				;--------------------------------------------------
+				; Calculate offset to current square: x-31
+				;--------------------------------------------------
+ 0002  8A 04			         mov       al,[si]                        ;move x to al
+ 0004  2C 1F			         sub       al,31                          ;subtract 31 from x
+ 0006  98			         cbw                                      ;convert to byte
+ 0007  8B F0			         mov       si,ax                          ;save x-31 to si
+				;--------------------------------------------------
+				; Calculate offset to current square: x-31 + y*30
+				;--------------------------------------------------
+ 0009  8A 05			         mov       al,[di]                        ;move y to al
+ 000B  F6 26 0000 R		         mul       [xMax]                         ;multiply by 30
+ 000F  03 F0			         add       si,ax                          ;accumulate total in si
+				;--------------------------------------------------
+				; Code to make 1 move in the maze
+				;--------------------------------------------------
+ 0011  80 3F 02			         cmp       byte ptr [bx],2                ;if direction is south
+ 0014  74 19			         je        east                           ;try to move east
+ 0016  80 3F 03			         cmp       byte ptr [bx],3                ;if direction is west
+ 0019  74 23			         je        south                          ;try to move south
+ 001B  80 3F 04			         cmp       byte ptr [bx],4                ;if direction is north
+ 001E  74 2D			         je        west                           ;try to move west
+				;--------------------------------------------------
+				; Try to move north
+				;--------------------------------------------------
+ 0020				north:                                            ;
+ 0020  3E: 80 7A E2 20		         cmp       byte ptr ds:[bp + si - 30],' ' ;if square isn't empty
+ 0025  75 08			         jne       east                           ;try east
+				;--------------------------------------------------
+				; Move north if we can
+				;--------------------------------------------------
+ 0027  FE 0D			         dec       byte ptr [di]                  ;move north
+ 0029  C6 07 04			         mov       byte ptr [bx],4                ;set direction to north
+ 002C  5E			         pop       si                             ;retrieve si register
+ 002D  EB 2B			         jmp       exit                           ;exit after 1 move
+				;--------------------------------------------------
+				; If we cannot move north, try east
+				;--------------------------------------------------
+ 002F				east:                                             ;
+ 002F  3E: 80 7A 01 20		         cmp       byte ptr ds:[bp + si + 1],' '  ;if square isn't empty
+ 0034  75 08			         jne       south                          ;try south
+				;--------------------------------------------------
+				; Move east if we can
+				;--------------------------------------------------
+ 0036  5E			         pop       si                             ;retrieve si register
+ 0037  FE 04			         inc       byte ptr [si]                  ;move east
+ 0039  C6 07 01			         mov       byte ptr [bx],1                ;set direction to east
+ 003C  EB 1C			         jmp       exit                           ;exit after 1 move
+				;--------------------------------------------------
+				; If we cannot move east, try south
+				;--------------------------------------------------
+ 003E				south:                                            ;
+ 003E  3E: 80 7A 1E 20		         cmp       byte ptr ds:[bp + si + 30],' ' ;if square isn't empty
+ 0043  75 08			         jne       west                           ;try west
+				;--------------------------------------------------
+				; Move south if we can
+				;--------------------------------------------------
+ 0045  FE 05			         inc       byte ptr [di]                  ;move south
+ 0047  C6 07 02			         mov       byte ptr [bx],2                ;set direction to south
+ 004A  5E			         pop       si                             ;retrieve si register
+ 004B  EB 0D			         jmp       exit                           ;exit ater 1 move
+				;--------------------------------------------------
+				; If we cannot move south, try west
+				;--------------------------------------------------
+ 004D				west:                                             ;
+ 004D  3E: 80 7A FF 20		         cmp       byte ptr ds:[bp + si - 1],' '  ;if square isn't empty
+ 0052  75 CC			         jne       north                          ;try north
+				;--------------------------------------------------
+				; Move west if we can
+				;--------------------------------------------------
+ 0054  5E			         pop       si                             ;retrieve si register
+ 0055  FE 0C			         dec       byte ptr [si]                  ;move west
+ 0057  C6 07 03			         mov       byte ptr [bx],3                ;set direction to west
+				;--------------------------------------------------
+				; Restore registers and return
+				;--------------------------------------------------
+ 005A				exit:                                             ;
+ 005A  58			         pop       ax                             ;retrieve ax register
+ 005B  C3			         ret                                      ;return
+				;--------------------------------------------------
+				         end                                      ;end
+				;--------------------------------------------------
+Microsoft (R) Macro Assembler Version 6.11		    03/18/20 19:28:43
+nextval.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	16 Bit	 0001	  Word	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	16 Bit	 005C	  Word	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0002h	 
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+east . . . . . . . . . . . . . .	L Near	 002F	  _TEXT	
+exit . . . . . . . . . . . . . .	L Near	 005A	  _TEXT	
+nextval  . . . . . . . . . . . .	L Near	 0000	  _TEXT	Public
+north  . . . . . . . . . . . . .	L Near	 0020	  _TEXT	
+south  . . . . . . . . . . . . .	L Near	 003E	  _TEXT	
+west . . . . . . . . . . . . . .	L Near	 004D	  _TEXT	
+xMax . . . . . . . . . . . . . .	Byte	 0000	  _DATA	
+
+	   0 Warnings
+	   0 Errors
