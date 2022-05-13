@@ -1,2 +1,3 @@
 # CSC236
-Completed coursework for CSC 236
+
+This is a storage of completed coursework for CSC 236.
